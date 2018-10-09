@@ -18,7 +18,7 @@ import com.v5ent.entity.Block;
 /**
  * 结点链通讯线程
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class NodeThread extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(NodeThread.class);

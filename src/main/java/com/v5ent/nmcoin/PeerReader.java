@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * 读取的所有数据都存储在ArrayList中，每一行单独存储。
  * 通过PeerNetwork通过一个通道访问数据。
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class PeerReader extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(PeerReader.class);

@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 /**
  * p2p网络，负责处理peer之间的连接和通讯。每次起独立线程来处理
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class PeerNetwork extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(PeerNetwork.class);

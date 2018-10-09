@@ -14,7 +14,7 @@ import com.v5ent.entity.Block;
 /**
  * 关于链处理的公共方法类
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class BlockUtils {
     /**

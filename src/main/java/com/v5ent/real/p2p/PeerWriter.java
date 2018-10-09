@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 /**
  * OutputThread 负责写数据到peer
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class PeerWriter extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(PeerWriter.class);

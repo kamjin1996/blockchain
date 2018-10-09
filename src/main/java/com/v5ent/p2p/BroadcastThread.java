@@ -15,7 +15,7 @@ import com.v5ent.entity.Block;
 /**
  * 广播线程
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class BroadcastThread extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(BroadcastThread.class);

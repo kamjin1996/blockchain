@@ -18,7 +18,7 @@ import com.v5ent.entity.Block;
 /**
  * 区块结点
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class Node {
     private static final Logger LOGGER = LoggerFactory.getLogger(Node.class);

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * p2p通讯线程
  * 在接受套接字后，分成两个独立的线程，一个用于输入数据，一个用于输出数据，因此单向数据不会阻塞
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class PeerThread extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(PeerThread.class);

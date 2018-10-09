@@ -3,14 +3,12 @@ package com.v5ent;
 import static spark.Spark.get;
 import static spark.Spark.post;
 
-import java.lang.reflect.Type;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.google.gson.reflect.TypeToken;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -32,7 +30,7 @@ import spark.Route;
  * 创建新块并加入到链上之前需要完成“工作量证明”过程。我们先写一个简单的函数来检查给定的哈希值是否满足要求。 哈希值必须具有给定位的“前导0”
  * “前导0”的位数是由难度（difficulty）决定的 可以动态调整难度（difficulty）来确保 Proof-of-Work 更难解
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class SparkWebWithPOW {
     private static final Logger LOGGER = LoggerFactory.getLogger(SparkWebWithPOW.class);

@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * <p>
  * 注意：不要把这个端口开放给外网
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class RpcServer extends Thread {
     private static final Logger LOGGER = LoggerFactory.getLogger(RpcServer.class);

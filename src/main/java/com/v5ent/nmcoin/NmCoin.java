@@ -24,7 +24,7 @@ import com.google.gson.GsonBuilder;
 /**
  * 结点
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class NmCoin {
     private static final Logger LOGGER = LoggerFactory.getLogger(NmCoin.class);

@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 处理单个rpc连接
  *
- * @author Mignet
+ * @author Kam1996
  */
 public class RpcThread extends Thread {
 
