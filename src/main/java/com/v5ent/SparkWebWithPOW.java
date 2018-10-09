@@ -3,12 +3,14 @@ package com.v5ent;
 import static spark.Spark.get;
 import static spark.Spark.post;
 
+import java.lang.reflect.Type;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.google.gson.reflect.TypeToken;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -66,7 +68,7 @@ public class SparkWebWithPOW {
         newBlock.setPrevHash(oldBlock.getHash());
         newBlock.setDifficulty(difficulty);
 
-        /*
+        /**
          * 这里的 for 循环很重要： 获得 i 的十六进制表示 ，将 Nonce 设置为这个值，并传入 calculateHash 计算哈希值。
          * 之后通过上面的 isHashValid 函数判断是否满足难度要求，如果不满足就重复尝试。 这个计算过程会一直持续，
          * 直到求得了满足要求的 Nonce 值，之后将新块加入到链上。
