@@ -9,13 +9,13 @@ import org.slf4j.LoggerFactory;
 
 /**
  * RPC服务
- *
+ * <p>
  * 注意：不要把这个端口开放给外网
+ *
  * @author Mignet
  */
-public class RpcServer extends Thread
-{
-	private static final Logger LOGGER = LoggerFactory.getLogger(RpcServer.class);
+public class RpcServer extends Thread {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RpcServer.class);
     private int port;
     private boolean runFlag = true;
 
@@ -24,37 +24,33 @@ public class RpcServer extends Thread
     /**
      * 默认配置
      */
-    public RpcServer()
-    {
+    public RpcServer() {
         this.port = 8016;
         this.rpcThreads = new ArrayList<>();
     }
 
     /**
      * 指定端口
+     *
      * @param port Port to listen on
      */
-    public RpcServer(int port)
-    {
+    public RpcServer(int port) {
         this.port = port;
         this.rpcThreads = new ArrayList<>();
     }
 
     @Override
-    public void run()
-    {
-        try
-        {
+    public void run() {
+        try {
             ServerSocket socket = new ServerSocket(port);
-            while (runFlag)
-            {
-            	RpcThread thread = new RpcThread(socket.accept());
+            while (runFlag) {
+                RpcThread thread = new RpcThread(socket.accept());
                 rpcThreads.add(thread);
                 thread.start();
             }
             socket.close();
-        } catch (Exception e){
-        	LOGGER.error("rpc error in port:" + port,e);
+        } catch (Exception e) {
+            LOGGER.error("rpc error in port:" + port, e);
         }
     }
 }
